@@ -1,0 +1,70 @@
+@model IEnumerable<NBU.Models.Review>
+
+@{
+
+  ViewData["Title"] = "Index";
+
+  Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>My Reviews</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Movie
+      </th>
+      <th>
+        Comment
+      </th>
+      <th>
+        Creator
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.Movie)
+        </td>
+        <td>
+          @{
+            if (item.Comment.Length > 10)
+            {
+              string descTrimmed = item.Comment.Substring(0, 10) + "...";
+              @Html.DisplayFor(modelItem => descTrimmed);
+            }
+            else
+            {
+              @Html.DisplayFor(modelItem => item.Comment);
+            }
+          }
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Creator)
+        </td>
+        <td>
+          <a asp-action="Edit" asp-route-id="@item.ID">
+            <button class="btn btn-primary btn-xs">
+              <i class="fa fa-trash-o"></i>Edit
+            </button>
+          </a>
+          <a asp-action="Delete" asp-route-id="@item.ID">
+            <button class="btn btn-danger btn-xs">
+              <i class="fa fa-trash-o"></i>Delete
+            </button>
+          </a>
+          <a asp-action="Details" asp-route-id="@item.ID">
+            <button class="btn btn-success btn-xs">
+              <i class="fa fa-trash-o"></i>Read
+            </button>
+          </a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

@@ -8,45 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NBU
 build_property.RootNamespace = NBU
-build_property.ProjectDir = e:\NBU Projects\movie-reviews-razor\NBU\
+build_property.ProjectDir = E:\NBU Projects\movie-reviews-razor\NBU\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = e:\NBU Projects\movie-reviews-razor\NBU
+build_property.MSBuildProjectDirectory = E:\NBU Projects\movie-reviews-razor\NBU
 build_property._RazorSourceGeneratorDebug = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Areas/Identity/Pages/_ViewStart.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Error/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/MyReviews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlSZXZpZXdzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_LoginPartial.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/MyReviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlSZXZpZXdzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/MyReviews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlSZXZpZXdzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Review/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Review/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Review/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aWV3XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/_ViewImports.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/_ViewStart.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[e:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_Layout.cshtml]
+[E:/NBU Projects/movie-reviews-razor/NBU/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-h7j2x6ysaw
