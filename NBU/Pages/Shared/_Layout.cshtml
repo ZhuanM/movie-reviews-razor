@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - NBU</title>
+    <link rel="stylesheet" href="~/Style/global-styles.css" type="text/css"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NBU.styles.css" asp-append-version="true" />
@@ -26,19 +27,19 @@
                           @*  asp-page="/Index" *@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        @* <li class="nav-item"> *@
                           @*  asp-page="/Privacy" *@
-                            <a class="nav-link text-dark" asp-area="" asp-action="Index">Privacy</a>
-                        </li>
+                            @* <a class="nav-link text-dark" asp-area="" asp-action="IndexPrivacy">Privacy</a>
+                        </li> *@
                         <li class="nav-item">
                           @* asp-page="/Reviews" *@
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="IndexReview">Reviews</a>
                         </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
                           <li class="nav-item">
                               @* asp-page="/MyReviews" *@
-                              <a class="nav-link text-dark" asp-area="" asp-controller="MyReviews" asp-action="Index">My Reviews</a>
+                              <a class="nav-link text-dark" asp-area="" asp-controller="MyReviews" asp-action="IndexMyReviews">My Reviews</a>
                           </li>
                         }
                     </ul>
@@ -55,7 +56,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - NBU - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - NBU - <a>Privacy</a>
         </div>
     </footer>
 
@@ -65,4 +66,10 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<style>
+  @* WRITING GLOBAL CSS HERE DUE TO BUG *@
+  .font-italic {
+    font-style: italic;
+  }
+</style>
 </html>

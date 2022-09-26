@@ -1,0 +1,73 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model IEnumerable<NBU.Models.Review>
+
+@{
+  ViewData["Title"] = "Index";
+
+  Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 class="mb-3 text-center font-italic">Reviews</h1>
+
+@if (SignInManager.IsSignedIn(User))
+{
+  <a class="d-flex justify-content-center" asp-action="Create">
+    <button class="btn btn-warning mb-4">
+      Write a review
+    </button>
+  </a>
+}
+
+<div class="table-responsive-md">
+  <table class="table table-dark table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>
+          Movie
+        </th>
+        <th>
+          Comment
+        </th>
+        <th>
+          Creator
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>
+            @Html.DisplayFor(modelItem => item.Movie)
+          </td>
+          <td>
+            @{
+              if (item.Comment.Length > 25)
+              {
+                string commentTrimmed = item.Comment.Substring(0, 25) + "...";
+                @Html.DisplayFor(modelItem => commentTrimmed);
+              }
+              else
+              {
+                @Html.DisplayFor(modelItem => item.Comment);
+              }
+            }
+          </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Creator)
+          </td>
+          <td>
+            <a class="d-flex justify-content-center align-items-center" asp-action="Details" asp-route-id="@item.ID">
+              <button class="btn btn-success">
+                Read
+              </button>
+            </a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

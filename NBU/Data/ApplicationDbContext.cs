@@ -11,6 +11,6 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    public virtual DbSet<Review> Reviews { get; set; }
+    public virtual DbSet<Review> Review { get; set; }
     public virtual DbSet<ReviewLikes> ReviewsLikes { get; set; }
 }

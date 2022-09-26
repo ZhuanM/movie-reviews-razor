@@ -1,0 +1,59 @@
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+@model NBU.Models.Review
+
+@{
+
+  ViewData["Title"] = "Details";
+
+  Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center font-italic mb-4">Review details</h1>
+
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <div class="card text-white bg-secondary mb-3" style="width: 70vw;">
+      <div class="card-header fs-3">Movie: @Html.DisplayFor(model => model.Movie)</div>
+      <div class="card-body">
+        <div class="card-text fs-5 mb-2">Comment: @Html.DisplayFor(model => model.Comment)</div>
+        <div class="card-text fs-5 mb-2">Creator: @Html.DisplayFor(model => model.Creator)</div>
+        <div class="card-text mb-4">Likes: @Html.DisplayFor(model => model.Likes)</div>
+
+        @{
+          var user = await UserManager.GetUserAsync(User);
+          var userId = user?.Id;
+          var userEmail = user?.Email;
+
+          if (Model.Creator != userEmail)
+          {
+            <div class="row">
+              <div class="col pl-0">
+                <a type="button" class="btn btn-success mb-2 w-100" asp-action="Like" asp-route-id="@Model.ID">
+                  Like
+                </a>
+              </div>
+              <div class="col pr-0">
+                <a type="button" class="btn btn-danger mb-2 w-100" asp-action="Dislike" asp-route-id="@Model.ID">
+                  Dislike
+                </a>
+              </div>
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <div class="form-group" style="margin-top: 15px;">
+      <a asp-action="IndexReview">
+        <button class="btn btn-secondary">
+          Go back
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

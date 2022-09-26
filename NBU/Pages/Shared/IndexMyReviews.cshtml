@@ -1,0 +1,72 @@
+@model IEnumerable<NBU.Models.Review>
+
+@{
+
+  ViewData["Title"] = "Index";
+
+  Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 class="mb-3 text-center font-italic">My Reviews</h1>
+
+<div class="table-responsive-md">
+  <table class="table table-dark table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>
+          Movie
+        </th>
+        <th>
+          Comment
+        </th>
+        <th>
+          Creator
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>
+            @Html.DisplayFor(modelItem => item.Movie)
+          </td>
+          <td>
+            @{
+              if (item.Comment.Length > 25)
+              {
+                string descTrimmed = item.Comment.Substring(0, 25) + "...";
+                @Html.DisplayFor(modelItem => descTrimmed);
+              }
+              else
+              {
+                @Html.DisplayFor(modelItem => item.Comment);
+              }
+            }
+          </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Creator)
+          </td>
+          <td class="d-flex justify-content-center">
+            <a asp-action="Edit" asp-route-id="@item.ID">
+              <button class="btn btn-primary" style="margin-right: 10px;">
+                Edit
+              </button>
+            </a>
+            <a asp-action="Delete" asp-route-id="@item.ID">
+              <button class="btn btn-danger" style="margin-right: 10px;">
+                Delete
+              </button>
+            </a>
+            <a asp-action="Details" asp-route-id="@item.ID">
+              <button class="btn btn-success">
+                Read
+              </button>
+            </a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
